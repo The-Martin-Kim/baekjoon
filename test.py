@@ -1,6 +1,1 @@
-N = int(input())
-
-for i in range(10):
-    print(i)
-
-print(i)
+print("Test Space")
