@@ -1,33 +1,16 @@
-import sys
-input = sys.stdin.readline
+def push(storage, x):
+    storage.append(x)
 
 
-def is_divided(a, numbers):
-    count = 0
-    for k in numbers:
-        if k % a == 0:
-            count += 1
-
-    return count
+def pop(storage):
+    storage.pop()
 
 
-N, M = map(int, input().split())
+stack = []
+push(stack, 3)
+push(stack, 4)
+push(stack, 7)
+pop(stack)
 
-A = list(map(int, input().split()))
-
-S = []
-temp = 0
-result = 0
-
-for i in range(N):
-    for k in A:
-        temp += k
-        S.append(temp)
-
-    result += is_divided(M, S)
-    A.pop(0)
-    S = []
-    temp = 0
-
-print(result)
+print(stack)
 

@@ -18,7 +18,7 @@ end = 1
 count = 1
 total = 1
 
-while start != N:
+while end != N:
     if total == N:
         end += 1
         total += end
